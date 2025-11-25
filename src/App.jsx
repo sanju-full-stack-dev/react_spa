@@ -15,11 +15,19 @@ function App() {
     "}",
     "console.log(greet('Coder'))",
   ]
- const redirect = () => {
-  const url = 'https://github.com/sanjaysanthosh140/'
-  // open in a new tab safely
-  window.open(url, '_blank', 'noopener,noreferrer')
- }
+
+  const redirect = () => {
+    const url = 'https://github.com/sanjaysanthosh140/'
+    // open in a new tab safely
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
+  // Get Started redirect
+  const goToGetStarted = () => {
+    const url = 'https://saastoola-b3f60.web.app'
+    // open external site in new tab safely
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
   return (
     <div className="welcome-root">
       <div className="bg-blobs" aria-hidden />
@@ -38,7 +46,7 @@ function App() {
           <p className="hero-sub">Design, build and ship delightful apps — your code canvas awaits.</p>
 
           <div className="hero-actions">
-            <button className="btn primary">Get Started</button>
+            <button className="btn primary" onClick={goToGetStarted}>Get Started</button>
             <button className="btn ghost" onClick={redirect}>View Portfolio</button>
           </div>
 
