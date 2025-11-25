@@ -15,7 +15,11 @@ function App() {
     "}",
     "console.log(greet('Coder'))",
   ]
-
+ const redirect = () => {
+  const url = 'https://github.com/sanjaysanthosh140/'
+  // open in a new tab safely
+  window.open(url, '_blank', 'noopener,noreferrer')
+ }
   return (
     <div className="welcome-root">
       <div className="bg-blobs" aria-hidden />
@@ -35,7 +39,7 @@ function App() {
 
           <div className="hero-actions">
             <button className="btn primary">Get Started</button>
-            <button className="btn ghost">View Portfolio</button>
+            <button className="btn ghost" onClick={redirect}>View Portfolio</button>
           </div>
 
           <ul id="features" className="feature-list">
